@@ -10,7 +10,7 @@ public class CameraLook : MonoBehaviour
     float xRotation = 0;
 
 
-    // Start is called before the first frame 
+    // 
     void Start()
     {
         
