@@ -11,7 +11,7 @@ public class ControladorPlayer : MonoBehaviour
         
     }
 
-    // Cuando se actualiza el objeto
+    // Update is called once per frame
     void Update()
     {
         //Izquierda
@@ -31,11 +31,11 @@ public class ControladorPlayer : MonoBehaviour
             transform.position += Vector3.down * velocidad * Time.deltaTime;
         }
         //Adelante
-        if(Input.GetKey(KeyCode.A)){
+        if(Input.GetKey(KeyCode.Z)){
             transform.position += Vector3.forward * velocidad * Time.deltaTime;
         }
         //Atras
-        if(Input.GetKey(KeyCode.S)){
+        if(Input.GetKey(KeyCode.X)){
             transform.position += Vector3.back * velocidad * Time.deltaTime;
         }
 
