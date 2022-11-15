@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using static GestorEscenas;
 
 public class ClickObject : MonoBehaviour
 {
@@ -18,7 +19,8 @@ public class ClickObject : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0)){
             if(go == getClickedObject(out RaycastHit hit)){
-                print("clicked over object");
+                print("clicked over object: "+go.name);
+                // GestorEscenas.toEscenaMenu();
             }
         }
     }
