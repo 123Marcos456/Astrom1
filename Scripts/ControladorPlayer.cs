@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControladorPlayer : MonoBehaviour
 {
     public float velocidad = 10f;
+    public GameObject audio_motor;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioSource sonidito = audio_motor.GetComponent<AudioSource>();
+        sonidito.Play();
     }
 
     // Update is called once per frame
@@ -37,6 +41,10 @@ public class ControladorPlayer : MonoBehaviour
         //Atras
         if(Input.GetKey(KeyCode.X)){
             transform.position += Vector3.back * velocidad * Time.deltaTime;
+        }
+        //Escape para salir a menú
+        if(Input.GetKey(KeyCode.Escape)){
+            SceneManager.LoadScene("Menu");
         }
 
     }
